@@ -1,4 +1,4 @@
-export let cart = JSON.parse(localStorage.getItem('cart')) 
+export let cart = JSON.parse(localStorage.getItem('cart'));
 
 if (!cart) {
   cart =
@@ -17,7 +17,7 @@ if (!cart) {
 }
 
 function saveToStorage() {
-  localStorage.setItem('cart', JSON.stringify(cart))
+  localStorage.setItem('cart', JSON.stringify(cart));
 }
 
 export function addToCart(productId) {
@@ -39,7 +39,7 @@ export function addToCart(productId) {
     cart.push({
       productId,
       quantity,
-      deliveryOptionId
+      deliveryOptionId: '1'
     })
   }
 
